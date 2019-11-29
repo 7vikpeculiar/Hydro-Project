@@ -464,15 +464,15 @@ btn15 = Tk.Button(TAB4, text ='Get SRI Data', font = "Times 10 bold", borderwidt
 btn15.grid(row =row_start + 6, column = 4, pady = 8)
 
 #############################################################
-L9 = Label(TAB2, text="WaterShed Delinitation", font='TkHeadingFont 20 bold')
+L9 = Label(TAB2, text="Part -1: WaterShed Delinitation", font='TkHeadingFont 20 bold')
 L9.grid(row = 2, column = 4, pady = 8)
 
 btn9 = Tk.Button(TAB2, text ='Upload DEM Data',  font = "Times 10 bold", borderwidth='3', background = 'red', command = lambda: process_file7())
 # btn.pack(side = TOP, pady = 5)
-btn9.grid(row = 4, column = 4, pady = 8)
+btn9.grid(row = 3, column = 4, pady = 8)
 btn10 = Tk.Button(TAB2, text ='Discharge Locations CSV', font = "Times 10 bold", borderwidth='3', background = 'red', command = lambda: process_file8())
 # btn.pack(side = TOP, pady = 5)
-btn10.grid(row = 5, column = 4, pady = 8)
+btn10.grid(row = 4, column = 4, pady = 8)
 
 ##########################################################################
 # L11 = Label(TAB2, text="Part-2: RiverBasin Delineation", font='TkHeadingFont 20')
@@ -497,19 +497,19 @@ btn10.grid(row = 5, column = 4, pady = 8)
 # 	if filename9 is not None and filename10 is not None and filename11 is not None:
 # 		Image.show('delin.png')
 
-btn11 = Button(TAB2, text ='Basin Mat', style = 'NuclearReactor.TButton', command = lambda: process_file9())
+btn11 = Tk.Button(TAB2, text ='Basin Mat', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file9())
 # btn.pack(side = TOP, pady = 5)
 btn11.grid(row = 7, column = 4, pady = 8)
-btn12 = Button(TAB2, text ='Latlong Limit', style = 'NuclearReactor.TButton', command = lambda: process_file10())
+btn12 = Tk.Button(TAB2, text ='Latlong Limit', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file10())
 # btn.pack(side = TOP, pady = 5)
 btn12.grid(row = 8, column = 4, pady = 8)
-btn13 = Button(TAB2, text ='Daily Precipitation', style = 'NuclearReactor.TButton', command = lambda: process_file11())
+btn13 = Tk.Button(TAB2, text ='Daily Precipitation', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file11())
 # btn.pack(side = TOP, pady = 5)
 btn13.grid(row = 9, column = 4, pady = 8)
 
 L12 = Label(TAB2, text="Part-3: Regression Analysis", font='TkHeadingFont 20')
 # L0.pack(side=TOP,pady=5)
-L12.grid(row = 7, column = 4, padx = 3, pady = 10)
+L12.grid(row = 9, column = 4, padx = 3, pady = 10)
 
 def process_file12():
 	global filename12
@@ -537,11 +537,25 @@ def process_file15():
 		import matplotlib.image as mpimg
 		img=mpimg.imread('vijayawada_ols.png')
 		imgplot = plt.imshow(img)
+		plt.show()
+
+btn14 = Tk.Button(TAB2, text ='Locations', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file12())
+# btn.pack(side = TOP, pady = 5)
+btn14.grid(row = 10, column = 4, pady = 8)
+btn15 = Tk.Button(TAB2, text ='Basin Mat', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file13())
+# btn.pack(side = TOP, pady = 5)
+btn15.grid(row = 11, column = 4, pady = 8)
+btn16 = Tk.Button(TAB2, text ='Daily Precipitation Mat', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file14())
+# btn.pack(side = TOP, pady = 5)
+btn16.grid(row = 12, column = 4, pady = 8)
+btn17 = Tk.Button(TAB2, text ='Delineated Mat', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file15())
+# btn.pack(side = TOP, pady = 5)
+btn17.grid(row = 13, column = 4, pady = 8)
 
 
 L11 = Label(TAB2, text="Part-2: RiverBasin Delineation", font='TkHeadingFont 20')
 # L0.pack(side=TOP,pady=5)
-L11.grid(row = 3, column = 4, padx = 3, pady = 10)
+L11.grid(row = 5, column = 4, padx = 3, pady = 10)
 
 def process_file9():
 	global filename9
@@ -564,15 +578,16 @@ def process_file11():
 		import matplotlib.image as mpimg
 		img=mpimg.imread('delin.png')
 		imgplot = plt.imshow(img)
-btn11 = Button(TAB2, text ='Basin Mat', style = 'NuclearReactor.TButton', command = lambda: process_file9())
+		plt.show()
+btn11 = Tk.Button(TAB2, text ='Basin Mat', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file9())
 # btn.pack(side = TOP, pady = 5)
-btn11.grid(row = 4, column = 4, pady = 8)
-btn12 = Button(TAB2, text ='Latlong Limit', style = 'NuclearReactor.TButton', command = lambda: process_file10())
+btn11.grid(row = 6, column = 4, pady = 8)
+btn12 = Tk.Button(TAB2, text ='Latlong Limit', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file10())
 # btn.pack(side = TOP, pady = 5)
-btn12.grid(row = 5, column = 4, pady = 8)
-btn13 = Button(TAB2, text ='Daily Precipitation', style = 'NuclearReactor.TButton', command = lambda: process_file11())
+btn12.grid(row = 7, column = 4, pady = 8)
+btn13 = Tk.Button(TAB2, text ='Daily Precipitation', font = "Times 10 bold", background = 'red', borderwidth='3', command = lambda: process_file11())
 # btn.pack(side = TOP, pady = 5)
-btn13.grid(row = 6, column = 4, pady = 8)
+btn13.grid(row = 8, column = 4, pady = 8)
 
 
 
